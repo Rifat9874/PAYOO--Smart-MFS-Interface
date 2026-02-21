@@ -9,8 +9,8 @@ if(bankAccount==="Select a Bank"){
 }
 
 // 2-get bank account number
-const accno=getValueFromInput("add-money-number");
-if(accno.length != 11){
+const account=getValueFromInput("add-money-number");
+if(account.length != 11){
     alert("Please enter a valid bank account number.");
     return; 
 }
@@ -20,7 +20,7 @@ const amount=getValueFromInput("add-money-amount");
 const newBalance = getBalance()+ Number(amount);
 const pin=getValueFromInput("add-money-pin");
 if(pin === "1234"){
-    alert(`Money added successful from ${bankAccount} at ${new Date()} account number ${accno}. Your new balance is: ${newBalance}`);
+    alert(`Money added successful from ${bankAccount} at ${new Date()} account number ${account}. Your new balance is: ${newBalance}`);
         setBalance(newBalance);
 
   //1- get history container 
@@ -29,9 +29,9 @@ if(pin === "1234"){
     const newHistory= document.createElement("div");
     //3. add INNER HTML to the div
     newHistory.innerHTML=`
-    <div class="transcation-card p-5 bg-base-100">
+    <div class="transaction-card p-5 bg-base-100">
         Add Money Success ${amount} BDT from ${bankAccount} 
-        at ${new Date().toLocaleString()} account number ${accno}.
+        at ${new Date().toLocaleString()} account number ${account}.
         New balance: ${newBalance}
 
     </div>

@@ -73,17 +73,17 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         <p> Cashout</p>
        </button>
 
-       <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+       <button onclick="showOnly('transfer-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
         <img src="assets/opt-3.png" alt="">
         <p>Transfer Money</p>
        </button>
 
-       <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+       <button onclick="showOnly('get-bonus') "class="btn flex-col h-full py-4 btn-primary btn-soft">
         <img src="assets/opt-4.png" alt="">
         <p>Get Bonus</p>
        </button>
 
-       <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+       <button  onclick="showOnly('pay-bill')" class="btn flex-col h-full py-4 btn-primary btn-soft">
         <img src="assets/opt-5.png" alt="">
         <p>Pay Bill</p>
        </button>
@@ -170,6 +170,119 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </section>
 
 
+<!-- transfer money -->
+
+<section id="transfer-money" class="w-11/12 mx-auto py-5 hidden  " >
+
+
+     <h2 class="text-xl font-bold mb-5">Transfer Money</h2>
+
+    <div class="card bg-base-100 w-full   shadow  rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+     
+     <!-- <label class="label text-neutral font-bold">Select Bank</label> -->
+
+            <!-- <select id="add-money-bank" class="select w-full rounded-full bg-base-200">
+               <option disabled selected>Select a Bank</option>
+               <option value="DBBL">DBBL</option>
+                   <option value="DHAKA BANK">DHAKA BANK</option>
+                    <option value="CITY BANK">CITY BANK</option>
+                  </select> -->
+            <br>
+
+          <label class="label text-neutral font-bold">User Account Number</label>
+          <input id="transfer-money-number" maxlength="11" minlength="11" type="text" class="input rounded-full w-full bg-base-200" value="01993182070"
+          placeholder="Enter Bank Account Number" />
+          <br>
+
+          <label class="label text-neutral font-bold">Amount </label>
+          <input id="transfer-money-amount" type="number" class="input rounded-full w-full bg-base-200" 
+          placeholder="Enter Amount for transfer Money" />
+          <br>
+
+          <label class="label text-neutral font-bold">Pin Number</label>
+          <input id="transfer-money-pin"  type="password" maxlength="4" minlength="4" class="input w-full rounded-full bg-base-200" placeholder="Enter 4 Digit Pin" />
+          <div></div>
+          <button id="transfer-money-btn" class="btn btn-primary mt-4 rounded-full">Send Money</button>
+        </fieldset>
+      </div>
+
+    </div>
+
+
+</section>
+
+<!-- get Bonus -->
+
+<section id="get-bonus" class="w-11/12 mx-auto py-5  hidden">
+
+    <h2 class="text-xl font-bold mb-5">Get Bonus</h2>
+
+    <div class="card bg-base-100 w-full   shadow  rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          
+
+          <label class="label text-neutral font-bold">Enter Bonus Coupon</label>
+          <input id="bonus-coupon"  type="password" maxlength="4" minlength="4" class="input w-full rounded-full bg-base-200" placeholder="Enter Bonus Coupon" />
+          <div></div>
+          <button id="bonus-btn" class="btn btn-primary mt-4 rounded-full">Get Bonus</button>
+        </fieldset>
+      </div>
+
+    </div>
+    
+</section>
+
+<!-- payBill -->
+
+
+<section id="pay-bill" class="w-11/12 mx-auto py-5 hidden " >
+
+
+     <h2 class="text-xl font-bold mb-5">Pay Bill</h2>
+
+    <div class="card bg-base-100 w-full   shadow  rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+     
+     <label class="label text-neutral font-bold">Select To Pay</label>
+
+            <select id="pay-money-bank" class="select w-full rounded-full bg-base-200">
+               <option disabled selected>Select a Bank</option>
+               <option value="DBBL">DBBL</option>
+                   <option value="DHAKA BANK">DHAKA BANK</option>
+                    <option value="CITY BANK">CITY BANK</option>
+                  </select>
+            <br>
+
+          <label class="label text-neutral font-bold">Biller Account Number</label>
+          <input id="pay-money-number" maxlength="11" minlength="11" type="text" class="input rounded-full w-full bg-base-200" value="01993182070"
+          placeholder="Enter Bank Account Number" />
+          <br>
+
+          <label class="label text-neutral font-bold">Amount to Pay</label>
+          <input id="pay-money-amount" type="number" class="input rounded-full w-full bg-base-200" 
+          placeholder="Enter Amount for Add Money" />
+          <br>
+
+          <label class="label text-neutral font-bold">Pin Number</label>
+          <input id="pay-money-pin"  type="password" maxlength="4" minlength="4" class="input w-full rounded-full bg-base-200" placeholder="Enter 4 Digit Pin" />
+          <div></div>
+          <button id="pay-money-btn" class="btn btn-primary mt-4 rounded-full">Pay Now</button>
+        </fieldset>
+      </div>
+
+    </div>
+
+
+</section>
+
+
+
+
+
 <!-- transaction section -->
 <section id="history"  class="w-11/12 mx-auto py-5 hidden ">
 
@@ -186,12 +299,21 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </section>
+ 
 
 <script src="./script/machine.js"></script>
 
 <script src="./script/addMoney.js"></script>
 
 <script src="./script/cashout.js"></script>
+
+<script src="./script/transferMoney.js"></script>
+
+<script src="./script/getBonus.js"></script>
+
+
+ <script  src="./script/payBill.js"></script>
+
 
 </body>
 
